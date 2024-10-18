@@ -1,0 +1,5 @@
+org\example\utility\DataParserManager.class
+org\example\utility\Letter.class
+org\example\broker\BrokerImplementation.class
+org\example\utility\Receiver.class
+org\example\utility\Payload.class
