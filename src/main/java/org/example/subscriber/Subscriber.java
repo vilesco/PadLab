@@ -21,7 +21,7 @@ public class Subscriber {
         System.out.println("Input your name: ");
         name = bufferedReader.readLine();
         BrokerSocket brokerSocket = new TransportService(socket);
-        System.out.println("Input \"connect\" command to be connected to broker");
+        System.out.println("Input \"Connect\" command to be connected to broker");
 
         command = bufferedReader.readLine();
         while (true)
@@ -35,7 +35,7 @@ public class Subscriber {
 
         Runnable r = new SubscriberReaderThread(brokerSocket);
         new Thread(r).start();
-        System.out.println("Input \"exit" + "\" command to be disconnected from broker");
+        System.out.println("Input \"Disconnect" + "\" command to be disconnected from broker");
 
         while (true) {
             command = bufferedReader.readLine();

@@ -29,6 +29,7 @@ public class Publisher {
             System.out.println("Input the receivers: (enter ok after typing the receivers)");
             while (!(receiver = bufferedReader.readLine()).equals("ok")) {
                 receivers.add(receiver);
+                break;
             }
 
             System.out.println("Input the message: ");
