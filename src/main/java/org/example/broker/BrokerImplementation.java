@@ -15,7 +15,7 @@ import java.util.concurrent.*;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
-public class BrokerImplementation {
+public class BrokerImplementation implements BrokerSocket{
     public ServerSocket serverSocket;
     private List<Letter> letterList;
     private List<Receiver> receiverList;
@@ -31,7 +31,7 @@ public class BrokerImplementation {
         }
     }
 
-//    @Override
+    @Override
     public String readAsync() {
         Socket connectionSocket = null;
 
@@ -112,7 +112,7 @@ public class BrokerImplementation {
         return message;
     }
 
-//    @Override
+    @Override
     public void writeAsync(String message) {
 
         BiConsumer<Receiver, Letter> receiverLetterMatch = (receiver, letter) -> {
