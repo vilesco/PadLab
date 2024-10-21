@@ -15,7 +15,7 @@ import java.util.concurrent.*;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
-public class BrokerImplementation {
+public class BrokerImplementation implements BrokerSocket{
     public ServerSocket serverSocket;
     private List<Letter> letterList;
     private List<Receiver> receiverList;
